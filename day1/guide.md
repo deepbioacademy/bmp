@@ -348,8 +348,8 @@ You need three things from whoever owns the server: **host** (an address like `h
 MobaXterm connects and prompts:
 
 ```
-login as: student
-student@hpc.university.edu's password:
+login as: <username>
+<username>@hpc.university.edu's password:
 ```
 
 Type your password (invisible) and press Enter.
@@ -359,7 +359,7 @@ Type your password (invisible) and press Enter.
 ```
 Welcome to the Bio-HPC cluster
 Last login: Fri Jul  3 09:12:03 2026 from 203.0.113.5
-student@hpc:~$
+<username>@hpc:~$
 ```
 
 Confirm you are really on the remote machine, not your laptop:
@@ -377,14 +377,14 @@ hpc
 **Move a file to the server:** MobaXterm shows an SFTP file browser on the left — **drag a file from Windows into it** to upload, or from it to Windows to download. Command-line equivalent, run from your **WSL** terminal:
 
 ```bash
-scp myfile.txt student@hpc.university.edu:/home/student/
+scp myfile.txt <username>@hpc.university.edu:/home/<username>/
 ```
 
 > **Key-based login (recommended, no password each time).** Generate a key once in WSL, then copy the public half to the server:
 > ```bash
 > ssh-keygen -t ed25519 -C "you@example.com"   # press Enter for defaults
-> ssh-copy-id student@hpc.university.edu        # paste password once
-> ssh student@hpc.university.edu                 # now logs in with no password
+> ssh-copy-id <username>@hpc.university.edu        # paste password once
+> ssh <username>@hpc.university.edu                 # now logs in with no password
 > ```
 
 ✅ **Checkpoint:** `hostname` on the SSH session prints the **server's** name, different from your laptop.
@@ -415,7 +415,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
 - Press **Enter** to read the license, hold **Enter/Space** to scroll, type **yes** to accept.
-- Accept the default install location (`/home/student/miniconda3`) with **Enter**.
+- Accept the default install location (`/home/<username>/miniconda3`) with **Enter**.
 - When asked *"Do you wish to update your shell profile to automatically initialize conda?"* type **yes**.
 
 Reload your shell so `conda` is on the PATH:
@@ -563,7 +563,7 @@ which samtools
 **Expected output** (path inside the env, not the system):
 
 ```
-/home/student/miniconda3/envs/bmp-rnaseq/bin/samtools
+/home/<username>/miniconda3/envs/bmp-rnaseq/bin/samtools
 ```
 
 **Export an exact snapshot** so a collaborator gets identical versions:
