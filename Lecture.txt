@@ -1,0 +1,59 @@
+1. Content representation 1 - Unix 
+/ (forward slash - file/directory pathy)
+pwd (present working directory)
+ls (list contents)
+ls -l (list contents with details)
+ls -la (list contents with hidden files)
+cd (change directory) 
+cd .. (back one step)
+cd ../.. (back two step) 
+tree (shows folder structure)
+tree -L 2 (shows level 2 folder structure - best practices)
+
+2. Content representation 2 - Unix (regular expression/wildcards - pattern)
+ls data/ (list all the content inside data folder)
+ls data/*.genome (shows all the files with .genome extension)
+ls data/pea?.genes (shows exact match with .genes extension)
+ls data/*.{genome,genes} - it shows two types of file
+ls data/*.[as]* - it shows the range of extensions 
+
+3. Content creation and removal
+mkdir <dirname> 
+touch <filename.extension>
+touch <file1.txt> file2.txt
+mv <path> <where> 
+cp <path> <where>
+rm <file>
+rmdir <empty dirname>
+rm -rf <dirname with content> 
+
+4. Accessing conten 
+head - it shows the top of the file 
+head -n 2 - it shows 2 lines (top)
+tail - it shows the end of the file 
+tail -n 2 - it shows 2 lines (bottom)
+more - it helps to explore the entire file 
+less - it also helps to explore the enitre file
+echo - it prints something 
+cat - it shows the content of the file 
+wc - word count 
+wc -l (line counts)
+
+5. Redirecting content
+| 
+> 
+<
+
+6. Querying content 
+sort 
+grep 
+cut 
+uniq 
+
+7. Archiving content
+zip -r <zipfilename.zip> <your folder> 
+unzip zipfilename.zip
+
+8. Comparing content 
+diff 
+comm 

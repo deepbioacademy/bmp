@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(zcat sample1_R1.fastq.gz)",
+      "Bash(ls *.csv)",
+      "Bash(find . -maxdepth 2 -iname \"*schedule*\")",
+      "Bash(grep -v '^$')",
+      "Bash(grep -c \"Reference: \\\\`Mod1Lec\" guide.md)",
+      "Bash(awk -F'\\\\t' '{print NF\" cols\"}')",
+      "Bash(git ls-tree *)",
+      "Bash(sort -k4 -n)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
