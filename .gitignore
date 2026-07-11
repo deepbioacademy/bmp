@@ -222,3 +222,4 @@ __marimo__/
 # Day 2 large data — exceed GitHub's 100 MB per-file limit; obtain separately (see day2/data/README.md)
 day2/data/demo.fastq
 day2/data/apple.genome
+.Rproj.user
